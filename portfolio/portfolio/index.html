@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seu Nome | Portfólio de Desenvolvimento</title>
+  <meta name="description" content="Portfólio de Seu Nome, estudante de tecnologia em busca de estágio em desenvolvimento.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Aplica o tema salvo antes de desenhar a página, evitando "piscar" -->
+  <script>
+    try {
+      var t = localStorage.getItem("tema");
+      if (t) document.documentElement.setAttribute("data-tema", t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <div class="container cabecalho__barra">
+      <a class="logo" href="#inicio" aria-label="Seu Nome, ir para o início">
+        <span class="logo__marca" aria-hidden="true">{}</span> Seu Nome
+      </a>
+
+      <nav id="menu" class="menu" aria-label="Navegação principal">
+        <ul class="menu__lista">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre mim</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="cabecalho__acoes">
+        <button id="btn-tema" class="btn-icone" type="button"
+                aria-label="Ativar modo escuro" aria-pressed="false">
+          <span aria-hidden="true" id="icone-tema">☾</span>
+        </button>
+        <button id="btn-menu" class="btn-icone btn-menu" type="button"
+                aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+          <span class="hamburguer" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- INÍCIO -->
+    <section id="inicio" class="secao hero" aria-labelledby="titulo-inicio">
+      <div class="container hero__grade">
+        <div class="hero__texto">
+          <p id="saudacao" class="hero__saudacao" aria-live="polite">Olá!</p>
+          <h1 id="titulo-inicio">Eu sou Marcos Vinicius, estudante de tecnologia e futuro psicológo.</h1>
+          <p class="hero__descricao">
+            Construo páginas e pequenos sistemas com HTML, CSS e JavaScript em projetos academicos.
+          </p>
+          <div class="hero__botoes">
+            <a class="botao botao--primario" href="#projetos">Ver projetos</a>
+            <a class="botao botao--secundario" href="#contato">Entrar em contato</a>
+          </div>
+        </div>
+        <figure class="hero__imagem">
+          <img src="img/WhatsApp Image 2026-10-28 at 09.04.19.jpeg" width="400" height="400" alt="Avatar ilustrado de Seu Nome">
+        </figure>
+      </div>
+    </section>
+
+    <!-- SOBRE MIM -->
+    <section id="sobre" class="secao" aria-labelledby="titulo-sobre">
+      <div class="container sobre">
+        <h2 id="titulo-sobre">Sobre mim</h2>
+        <div class="sobre__texto">
+          <p>
+            Meu nome é Marcos Vinicius, tenho 16 anos e moro em Natal/RN. Atualmente curso
+            TI no Senac ZN. [Conte aqui, com suas palavras, o que
+            despertou seu interesse por tecnologia.]
+          </p>
+          <p>
+            Meu objetivo é usar o curso de TI para acrescentar mais conhecimento, e peso no meu currículo.
+          </p>
+          <p>
+
+            Tenho como hobby nadar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="secao secao--destaque" aria-labelledby="titulo-habilidades">
+      <div class="container">
+        <h2 id="titulo-habilidades">Habilidades</h2>
+        <p class="secao__intro">O que já uso nos meus projetos e o que estou aprendendo agora.</p>
+
+        <div class="habilidades">
+          <div class="habilidades__grupo">
+            <h3>Já utilizo</h3>
+            <ul class="etiquetas">
+              <li>HTML</li>
+              <li>CSS (Flexbox e Grid)</li>
+              <li>JavaScript</li>
+              <li>JSON</li>
+              <li>Lógica de programação</li>
+            </ul>
+          </div>
+          <div class="habilidades__grupo">
+            <h3>Estou aprendendo</h3>
+            <ul class="etiquetas etiquetas--aprendendo">
+              <li>Acessibilidade web</li>
+              <li>Banco de dados (SQL)</li>
+              <li>Python</li>
+              <li>Node.js</li>
+            </ul>
+          </div>
+          <div class="habilidades__grupo">
+            <h3>Habilidades pessoais</h3>
+            <ul class="etiquetas">
+              <li>Trabalho em equipe</li>
+              <li>Comunicação</li>
+              <li>Organização</li>
+              <li>Vontade de aprender</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="secao" aria-labelledby="titulo-projetos">
+      <div class="container">
+        <h2 id="titulo-projetos">Projetos</h2>
+        <p class="secao__intro">Trabalhos que desenvolvi durante o curso.</p>
+
+        <div class="projetos">
+          <article class="projeto">
+            <div class="projeto__corpo">
+              <h3>Locadora</h3>
+              <p> Um site contendo filme e série para compra e aluguel, se enquadrando em uma ODS.</p>
+              <ul class="etiquetas etiquetas--pequenas" aria-label="Tecnologias usadas">
+                <li>HTML</li><li>CSS</li>
+              </ul>
+              
+            </div>
+          </article>
+
+          <article class="projeto">
+            <div class="projeto__corpo">
+              <h3>Senacurso</h3>
+              <p>Unificava em um site todos os campus pertencentes ao Senac, com informações sobre cursos, localização e contato.
+              </p>
+              <ul class="etiquetas etiquetas--pequenas" aria-label="Tecnologias usadas">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li>
+              </ul>
+             
+            </div>
+          </article>
+
+          <article class="projeto">
+            <div class="projeto__corpo">
+              <h3>Confeitaria</h3>
+              <p>Um site para uma confeitaria local, com informações sobre produtos, serviços e localização.</p>
+              <ul class="etiquetas etiquetas--pequenas" aria-label="Tecnologias usadas">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li>
+              </ul>
+              
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="secao secao--destaque" aria-labelledby="titulo-contato">
+      <div class="container contato">
+        <div class="contato__info">
+          <h2 id="titulo-contato">Contato</h2>
+          <p>
+            Quer conversar sobre uma oportunidade de estágio? Preencha o formulário
+            ou fale comigo pelos canais abaixo.
+          </p>
+          <ul class="contato__canais">
+            <li><a href="#">marcosvinicius007834@gmail.com</a></li>
+            <li><a href="https://github.com/MarcosVinic1us" target="_blank" rel="noopener noreferrer">GitHub <span class="sr-only">(abre em nova aba)</span></a></li>
+            <li><a href="https://www.linkedin.com/in/marcos-vinicius-b41a19445/" target="_blank" rel="noopener noreferrer">LinkedIn <span class="sr-only">(abre em nova aba)</span></a></li>
+          </ul>
+        </div>
+
+        
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="container rodape__barra">
+      <p>&copy; <span id="ano">2026</span> Seu Nome. Todos os direitos reservados.</p>
+      <a href="#inicio" class="rodape__topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

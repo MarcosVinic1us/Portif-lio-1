@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Avatar com as iniciais do autor">
+<rect width="400" height="400" rx="200" fill="#F2B134"/>
+<circle cx="200" cy="160" r="70" fill="#14213D"/>
+<path d="M60 360c10-80 70-120 140-120s130 40 140 120a200 200 0 0 1-280 0z" fill="#14213D"/>
+<text x="200" y="178" text-anchor="middle" font-family="Georgia,serif" font-size="52" fill="#F2B134">SN</text>
+</svg>
