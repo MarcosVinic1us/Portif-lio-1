@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seu Nome | Portfólio de Desenvolvimento</title>
+  <meta name="description" content="Portfólio de Seu Nome, estudante de tecnologia em busca de estágio em desenvolvimento.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Aplica o tema salvo antes de desenhar a página, evitando "piscar" -->
+  <script>
+    try {
+      var t = localStorage.getItem("tema");
+      if (t) document.documentElement.setAttribute("data-tema", t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <div class="container cabecalho__barra">
+      <a class="logo" href="#inicio" aria-label="Seu Nome, ir para o início">
+        <span class="logo__marca" aria-hidden="true">{}</span> Seu Nome
+      </a>
+
+      <nav id="menu" class="menu" aria-label="Navegação principal">
+        <ul class="menu__lista">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre mim</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="cabecalho__acoes">
+        <button id="btn-tema" class="btn-icone" type="button"
+                aria-label="Ativar modo escuro" aria-pressed="false">
+          <span aria-hidden="true" id="icone-tema">☾</span>
+        </button>
+        <button id="btn-menu" class="btn-icone btn-menu" type="button"
+                aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+          <span class="hamburguer" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- INÍCIO -->
+    <section id="inicio" class="secao hero" aria-labelledby="titulo-inicio">
+      <div class="container hero__grade">
+        <div class="hero__texto">
+          <p id="saudacao" class="hero__saudacao" aria-live="polite">Olá!</p>
+          <h1 id="titulo-inicio">Eu sou Seu Nome, estudante de tecnologia e futuro(a) desenvolvedor(a).</h1>
+          <p class="hero__descricao">
+            Construo páginas e pequenos sistemas com HTML, CSS e JavaScript.
+            Estou em busca de um estágio para aprender em equipe e colocar em prática o que estudo.
+          </p>
+          <div class="hero__botoes">
+            <a class="botao botao--primario" href="#projetos">Ver projetos</a>
+            <a class="botao botao--secundario" href="#contato">Entrar em contato</a>
+          </div>
+        </div>
+        <figure class="hero__imagem">
+          <img src="img/avatar.svg" width="400" height="400" alt="Avatar ilustrado de Seu Nome">
+        </figure>
+      </div>
+    </section>
+
+    <!-- SOBRE MIM -->
+    <section id="sobre" class="secao" aria-labelledby="titulo-sobre">
+      <div class="container sobre">
+        <h2 id="titulo-sobre">Sobre mim</h2>
+        <div class="sobre__texto">
+          <p>
+            Meu nome é Seu Nome, tenho X anos e moro em Cidade/UF. Atualmente curso
+            Nome do Curso na Nome da Instituição. [Conte aqui, com suas palavras, o que
+            despertou seu interesse por tecnologia.]
+          </p>
+          <p>
+            Meu objetivo é conseguir uma vaga de estágio em desenvolvimento
+            [front-end / back-end / full stack], onde eu possa aprender com profissionais
+            experientes, receber feedback e contribuir com projetos reais.
+          </p>
+          <p>
+            Fora da tela, gosto de [um hobby ou interesse seu].
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="secao secao--destaque" aria-labelledby="titulo-habilidades">
+      <div class="container">
+        <h2 id="titulo-habilidades">Habilidades</h2>
+        <p class="secao__intro">O que já uso nos meus projetos e o que estou aprendendo agora.</p>
+
+        <div class="habilidades">
+          <div class="habilidades__grupo">
+            <h3>Já utilizo</h3>
+            <ul class="etiquetas">
+              <li>HTML5 semântico</li>
+              <li>CSS3 (Flexbox e Grid)</li>
+              <li>JavaScript</li>
+              <li>Git e GitHub</li>
+              <li>Lógica de programação</li>
+            </ul>
+          </div>
+          <div class="habilidades__grupo">
+            <h3>Estou aprendendo</h3>
+            <ul class="etiquetas etiquetas--aprendendo">
+              <li>Acessibilidade web</li>
+              <li>Banco de dados (SQL)</li>
+              <li>Python</li>
+              <li>Node.js</li>
+            </ul>
+          </div>
+          <div class="habilidades__grupo">
+            <h3>Habilidades pessoais</h3>
+            <ul class="etiquetas">
+              <li>Trabalho em equipe</li>
+              <li>Comunicação</li>
+              <li>Organização</li>
+              <li>Vontade de aprender</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="secao" aria-labelledby="titulo-projetos">
+      <div class="container">
+        <h2 id="titulo-projetos">Projetos</h2>
+        <p class="secao__intro">Trabalhos que desenvolvi durante o curso.</p>
+
+        <div class="projetos">
+          <article class="projeto">
+            <img src="img/projeto-1.svg" width="640" height="360" loading="lazy"
+                 alt="Miniatura do Projeto 1: página inicial em tons de azul">
+            <div class="projeto__corpo">
+              <h3>Nome do Projeto 1</h3>
+              <p>Descreva em 2 ou 3 frases o que o projeto faz, qual problema resolve e o que você aprendeu.</p>
+              <ul class="etiquetas etiquetas--pequenas" aria-label="Tecnologias usadas">
+                <li>HTML</li><li>CSS</li>
+              </ul>
+              <div class="projeto__links">
+                <a href="#" target="_blank" rel="noopener noreferrer">Ver código <span class="sr-only">do Projeto 1 (abre em nova aba)</span></a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Ver online <span class="sr-only">do Projeto 1 (abre em nova aba)</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="projeto">
+            <img src="img/projeto-2.svg" width="640" height="360" loading="lazy"
+                 alt="Miniatura do Projeto 2: painel em tons de verde">
+            <div class="projeto__corpo">
+              <h3>Nome do Projeto 2</h3>
+              <p>Descreva em 2 ou 3 frases o que o projeto faz, qual problema resolve e o que você aprendeu.</p>
+              <ul class="etiquetas etiquetas--pequenas" aria-label="Tecnologias usadas">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li>
+              </ul>
+              <div class="projeto__links">
+                <a href="#" target="_blank" rel="noopener noreferrer">Ver código <span class="sr-only">do Projeto 2 (abre em nova aba)</span></a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Ver online <span class="sr-only">do Projeto 2 (abre em nova aba)</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="projeto">
+            <img src="img/projeto-3.svg" width="640" height="360" loading="lazy"
+                 alt="Miniatura do Projeto 3: aplicação em tons de laranja">
+            <div class="projeto__corpo">
+              <h3>Nome do Projeto 3</h3>
+              <p>Descreva em 2 ou 3 frases o que o projeto faz, qual problema resolve e o que você aprendeu.</p>
+              <ul class="etiquetas etiquetas--pequenas" aria-label="Tecnologias usadas">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li>
+              </ul>
+              <div class="projeto__links">
+                <a href="#" target="_blank" rel="noopener noreferrer">Ver código <span class="sr-only">do Projeto 3 (abre em nova aba)</span></a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Ver online <span class="sr-only">do Projeto 3 (abre em nova aba)</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="secao secao--destaque" aria-labelledby="titulo-contato">
+      <div class="container contato">
+        <div class="contato__info">
+          <h2 id="titulo-contato">Contato</h2>
+          <p>
+            Quer conversar sobre uma oportunidade de estágio? Preencha o formulário
+            ou fale comigo pelos canais abaixo.
+          </p>
+          <ul class="contato__canais">
+            <li><a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></li>
+            <li><a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer">GitHub <span class="sr-only">(abre em nova aba)</span></a></li>
+            <li><a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer">LinkedIn <span class="sr-only">(abre em nova aba)</span></a></li>
+          </ul>
+        </div>
+
+        <form id="form-contato" class="formulario" novalidate aria-describedby="aviso-privacidade">
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" autocomplete="name"
+                   required aria-describedby="erro-nome">
+            <p id="erro-nome" class="campo__erro" role="alert"></p>
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email"
+                   required aria-describedby="erro-email">
+            <p id="erro-email" class="campo__erro" role="alert"></p>
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required
+                      aria-describedby="erro-mensagem"></textarea>
+            <p id="erro-mensagem" class="campo__erro" role="alert"></p>
+          </div>
+
+          <div class="campo campo--check">
+            <input id="consentimento" name="consentimento" type="checkbox"
+                   required aria-describedby="aviso-privacidade erro-consentimento">
+            <label for="consentimento">
+              Concordo em compartilhar meu nome e e-mail apenas para que a resposta a esta mensagem seja possível.
+            </label>
+            <p id="erro-consentimento" class="campo__erro" role="alert"></p>
+          </div>
+
+          <p id="aviso-privacidade" class="formulario__aviso">
+            Seus dados não são armazenados neste site e não serão compartilhados com terceiros.
+          </p>
+
+          <button class="botao botao--primario" type="submit">Enviar mensagem</button>
+          <p id="status-form" class="formulario__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="container rodape__barra">
+      <p>&copy; <span id="ano">2026</span> Seu Nome. Todos os direitos reservados.</p>
+      <a href="#inicio" class="rodape__topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
